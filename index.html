@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+</head>
+<body><br>
+    <h2 class="head1">Our Products</h2><br><br>
+    <p class="para2">Our Delicious Snack is a perfect blend of crunch and flavor, designed to satisfy your cravings at any time of the day.</p>
+    <div class="container">
+        <div class="card__container">
+            <article class="card__article">
+                <img src="./nanthra chips.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <h3 class="card__title">Nanthra Chips</h3>
+                    <span class="card__price">Rs 70</span>
+                </div>
+                <a href="#" class="card__button">View More <i class="ri-arrow-right-line"></i></a>
+            </article>
+            <article class="card__article">
+                <img src="./thin chips.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <h3 class="card__title">Thin Chips</h3>
+                    <span class="card__price">Rs 75</span>
+                </div>
+                <a href="#" class="card__button">View More <i class="ri-arrow-right-line"></i></a>
+            </article>
+            <article class="card__article">
+                <img src="./chips.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <h3 class="card__title">Potato Chips</h3>
+                    <span class="card__price">Rs 65</span>
+                </div>
+                <a href="#" class="card__button">View More <i class="ri-arrow-right-line"></i></a>
+            </article>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="card__container1">
+            <article class="card__article1">
+                <img src="./peanut laddu.jpg" alt="" class="card__img1">
+                <div class="card__data1">
+                    <h3 class="card__title1">Peanut Laddu</h3>
+                    <span class="card__price1">Rs 40</span>
+                </div>
+                <a href="#" class="card__button1">View More <i class="ri-arrow-right-line"></i></a>
+            </article>
+            <article class="card__article1">
+                <img src="./sesame balls.jpg" alt="" class="card__img1">
+                <div class="card__data1">
+                    <h3 class="card__title1">Sesame Balls</h3>
+                    <span class="card__price1">Rs 70</span>
+                </div>
+                <a href="#" class="card__button1">View More <i class="ri-arrow-right-line"></i></a>
+            </article>
+            <article class="card__article1">
+                <img src="./pottu kadalai.jpg" alt="" class="card__img1">
+                <div class="card__data1">
+                    <h3 class="card__title1">Bengal Gram - Roasted</h3>
+                    <span class="card__price1">Rs 30</span>
+                </div>
+                <a href="#" class="card__button1">View More <i class="ri-arrow-right-line"></i></a>
+            </article>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const elementsToAnimate = document.querySelectorAll('.card__article, .card__article1');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, { threshold: 0.1 });
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
+
